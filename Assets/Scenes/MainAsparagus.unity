@@ -20006,6 +20006,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1800142805}
+  - component: {fileID: 1800142806}
+  - component: {fileID: 1800142807}
   m_Layer: 0
   m_Name: RabbitSpawn
   m_TagString: Untagged
@@ -20030,6 +20032,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1800142806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800142804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3b23da11e7831428c4f61d3bdb6cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angrySkybox: {fileID: 2100000, guid: 792d94a14edb6dd4d96351bf988d0cc5, type: 2}
+--- !u!65 &1800142807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800142804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.063152, y: 20.633644, z: 7.1726227}
+  m_Center: {x: 21.477163, y: 16.867313, z: -8.89587}
 --- !u!1 &1896322472
 GameObject:
   m_ObjectHideFlags: 0

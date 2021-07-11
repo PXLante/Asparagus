@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour {
     public GameObject rabbitAndGrass;
     private Boolean rabbitNotSpawned = true;
 
-
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
@@ -34,7 +33,7 @@ public class AudioManager : MonoBehaviour {
         Play("Intro");
     }
 
-    void Play(string name) 
+    public void Play(string name) 
     {
         Sound selectedSound = Array.Find(sounds, sound => sound.name == name);
         selectedSound.source.Play();
