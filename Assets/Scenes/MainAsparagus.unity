@@ -20045,6 +20045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angrySkybox: {fileID: 2100000, guid: 792d94a14edb6dd4d96351bf988d0cc5, type: 2}
+  secondSongEnded: 0
 --- !u!65 &1800142807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20182,3 +20183,34 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 8beaedaf7a4023642b48737ef7ee04b7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c737dd230724d61469e1c672cf47ed9e, type: 3}
+--- !u!1 &2126192361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 574100da4e61ec0468d382a07449ad5a, type: 3}
+  m_PrefabInstance: {fileID: 71918344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2126192362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126192361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee3f07dd66aeaf44b9d6f3447b2ec09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happySkybox: {fileID: 2100000, guid: 4696b064b97aef045ae631a71aef7129, type: 2}
+--- !u!65 &2126192363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126192361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13856852, y: 0.13833755, z: 0.14867449}
+  m_Center: {x: -0.00045816356, y: 0.0021929755, z: 0.074337244}

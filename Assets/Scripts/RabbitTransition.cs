@@ -9,6 +9,11 @@ public class RabbitTransition : MonoBehaviour
     public Material angrySkybox;
     private Boolean sadTransitionHasBegun = false;
 
+    private Boolean secondSongStarted = false;
+
+    // we're making this public so the tree script can access this.
+    public Boolean secondSongEnded = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +21,18 @@ public class RabbitTransition : MonoBehaviour
     }
 
     // Update is called once per frame
+    // God forgive me for my sins
     void Update()
     {
-        
+        // this is horribly unoptimized, but again, this is a game jam.
+        Sound secondSound = Array.Find(FindObjectOfType<AudioManager>().sounds, sound => sound.name == "Sad");
+
+        if (secondSongStarted) {
+            if (!secondSound.source.isPlaying) {
+                secondSongEnded = true;
+                print(secondSongEnded);
+            }
+        }
     }
 
     /// <summary>
@@ -40,6 +54,7 @@ public class RabbitTransition : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Sad");
             sadTransitionHasBegun = true;
             RenderSettings.skybox = angrySkybox;
+            secondSongStarted = true;
         }  
     }
 
