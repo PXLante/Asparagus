@@ -7,6 +7,9 @@ public class TreeTransition : MonoBehaviour
 {
 
     public Material happySkybox;
+    public GameObject secondSongText;
+    public GameObject finalSongText;
+    public GameObject buddyRabbit;
     private Boolean finalSongHasStarted = false;
 
     // Start is called before the first frame update
@@ -29,6 +32,9 @@ public class TreeTransition : MonoBehaviour
     {
         if (!finalSongHasStarted) {
             if (FindObjectOfType<RabbitTransition>().secondSongEnded) {
+                secondSongText.SetActive(false);
+                finalSongText.SetActive(true);
+                buddyRabbit.SetActive(true);
                 FindObjectOfType<AudioManager>().Play("Ending");
                 finalSongHasStarted = true;
                 RenderSettings.skybox = happySkybox;

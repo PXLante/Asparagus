@@ -7,6 +7,10 @@ public class RabbitTransition : MonoBehaviour
 {
 
     public Material angrySkybox;
+
+    public GameObject InitialSongText;
+    public GameObject secondSongText;
+
     private Boolean sadTransitionHasBegun = false;
 
     private Boolean secondSongStarted = false;
@@ -50,11 +54,13 @@ public class RabbitTransition : MonoBehaviour
     void OnMouseDown()
     {
         if (!sadTransitionHasBegun) {
+            InitialSongText.SetActive(false);
             print("Enter");   
             FindObjectOfType<AudioManager>().Play("Sad");
             sadTransitionHasBegun = true;
             RenderSettings.skybox = angrySkybox;
             secondSongStarted = true;
+            secondSongText.SetActive(true);
         }  
     }
 
